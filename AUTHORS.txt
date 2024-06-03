@@ -1,0 +1,6 @@
+Christoph Pokorny (maintainer)
+Omar Awile (contributor)
+James B. Isbister (contributor)
+Kerem Kurban (contributor)
+Matthias Wolf (contributor)
+Michael W. Reimann (contributor)
