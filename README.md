@@ -44,11 +44,11 @@ Reproduction repository with code and configuration files for applying connectom
 
 ### Interneuron rewiring
 
-- __Step 1:__ Follow [interneuron_rewiring_preparation.ipynb](interneuron_rewiring/interneuron_rewiring_preparation.ipynb) to configure and run model fitting, rewiring and structural comparison. As an output of this step, a new SONATA circuit with rewired interneuron connectivity will be created.
+- __Step 1:__ Follow [interneuron_rewiring_preparation.ipynb](interneuron_rewiring/code/interneuron_rewiring_preparation.ipynb) to configure and run model fitting, rewiring and structural comparison. As an output of this step, a new SONATA circuit with rewired interneuron connectivity will be created.
 - __Step 2:__ Functional quantification of the rewired connectome by running network simulations with current injection.
   - (a) Follow the instructions "Simulating the model" from [doi: 10.5281/zenodo.8026353](https://doi.org/10.5281/zenodo.8026353) for setting up the SSCx network model for simulations.
   - (b) In case the rewired circuit from Zenodo is used: Make sure that all path references in the `circuit_config<_tc>.json` of the rewired circuit are pointing to the location of the original circuit (since only the connectome, i.e., `edges.h5`, is different).
-  - (c) Adpat paths and use example simulation configs from this repo to run simulations.
+  - (c) Adapt paths and use example simulation configs from this repo to run simulations.
 
 <u>Note</u>: All (intermediate) results from steps 1 and 2 are also contained in the Zenodo dataset.
 
