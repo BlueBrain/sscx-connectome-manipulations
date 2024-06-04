@@ -8,7 +8,9 @@ Reproduction repository for applying connectome manipulations to a detailed mode
 
 ## Introduction
 
-Repository with code and configuration files for applying connectome manipulations using [_Connectome-Manipulator_](https://github.com/BlueBrain/connectome-manipulator) to a detailed anatomical<sup>1</sup> and physiological<sup>2</sup> model of the rat somatosensory cortex in SONATA<sup>3</sup> format (released under [doi: 10.5281/zenodo.8026353](https://doi.org/10.5281/zenodo.8026353)), analyzing results, and reproducing the experiments and figures in the accompanying article<sup>4</sup>. Specifically, we describe the following two rewiring experiments in the article. First, we increased inhibitory targeting specificity of VIP+ (vasoactive intestinal peptide-expressing) interneurons, thereby transplanting connectivity trends present in the MICrONS dataset<sup>5</sup>. Second, we studied how progressively simplified<sup>6</sup>, but otherwise equivalent connectivity among excitatory neurons affects the dynamics of spiking. We refer to these experiments as "interneuron rewiring" and "simplified connectomes" respectively.
+Reproduction repository with code and configuration files for applying connectome manipulations using [_Connectome-Manipulator_](https://github.com/BlueBrain/connectome-manipulator) to a detailed anatomical<sup>1</sup> and physiological<sup>2</sup> model of the rat somatosensory cortex (SSCx) in SONATA<sup>3</sup> format (released under [doi: 10.5281/zenodo.8026353](https://doi.org/10.5281/zenodo.8026353)), analyzing results, and reproducing the experiments and figures that can be found in the accompanying article<sup>4</sup>. Specifically, the following two rewiring experiments that are described in the article are included:
+- __Interneuron rewiring:__ Increasing the inhibitory targeting specificity of VIP+ (vasoactive intestinal peptide-expressing) interneurons, thereby transplanting connectivity trends present in the MICrONS dataset<sup>5</sup>. Functional quantification through current injection simulations.
+- __Simplified connectomes:__ Progressively simplifying<sup>6</sup> connectivity among excitatory neurons. Investigating the changes in spiking synamics through re-calibration to an _in vivo_-like activity state.
 
 ### References:
 
@@ -41,6 +43,14 @@ Repository with code and configuration files for applying connectome manipulatio
 ## How to run
 
 ### Interneuron rewiring
+
+- __Step 1:__ Follow [interneuron_rewiring_preparation.ipynb](interneuron_rewiring/interneuron_rewiring_preparation.ipynb) to configure and run model fitting, rewiring and structural comparison. As an output of this step, a new SONATA circuit with rewired interneuron connectivity will be created.
+- __Step 2:__ Functional quantification of the rewired connectome by running network simulations with current injection.
+  - (a) Follow the instructions "Simulating the model" from [doi: 10.5281/zenodo.8026353](https://doi.org/10.5281/zenodo.8026353) for setting up the SSCx network model for simulations.
+  - (b) In case the rewired circuit from Zenodo is used: Make sure that all path references in the `circuit_config<_tc>.json` of the rewired circuit are pointing to the location of the original circuit (since only the connectome, i.e., `edges.h5`, is different).
+  - (c) Adpat paths and use example simulation configs from this repo to run simulations.
+
+<u>Note</u>: All (intermediate) results from steps 1 and 2 are also contained in the Zenodo dataset.
 
 ### Simplified connectomes
 

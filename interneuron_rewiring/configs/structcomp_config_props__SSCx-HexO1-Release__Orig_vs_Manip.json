@@ -1,0 +1,232 @@
+{
+  "working_dir": "/gpfs/bbp.cscs.ch/data/scratch/proj83/home/pokorny/Zenodo/SSCx-connectome-manipulation-data/interneuron_rewiring/structural_comparator/SSCx-HexO1-Release",
+  "out_dir": "/gpfs/bbp.cscs.ch/data/scratch/proj83/home/pokorny/Zenodo/SSCx-connectome-manipulation-data/interneuron_rewiring/structural_comparator/SSCx-HexO1-Release",
+  "circuits": {
+    "0": {
+      "circuit_config": "/gpfs/bbp.cscs.ch/project/proj83/jira-tickets/NSETM-1948-extract-hex-O1/data/O1_data/circuit_config.json",
+      "circuit_name": "Orig"
+    },
+    "1": {
+      "circuit_config": "/gpfs/bbp.cscs.ch/data/scratch/proj83/home/pokorny/Zenodo/SSCx-connectome-manipulation-data/interneuron_rewiring/circuits/circuits/SSCx-HexO1-Release__SSCX_hex0_inh_tc__hex0_rewired/circuit_config.json",
+      "circuit_name": "Manip"
+    }
+  },
+  "plot_types": [
+    {
+      "name": "PropsMeanPerMTypeHex0",
+      "fct": {
+        "source": "properties",
+        "kwargs": {
+          "group_by": "mtype",
+          "skip_empty_groups": true,
+          "sel_src": {
+            "node_set": "hex0",
+            "mtype": [
+              "L23_BTC",
+              "L23_SBC",
+              "L4_BTC",
+              "L4_SBC",
+              "L5_BTC",
+              "L5_SBC",
+              "L6_BTC",
+              "L6_SBC"
+            ]
+          },
+          "sel_dest": {
+            "node_set": "hex0",
+            "mtype": [
+              "L1_DAC",
+              "L1_HAC",
+              "L1_LAC",
+              "L1_NGC-DA",
+              "L1_NGC-SA",
+              "L1_SAC",
+              "L23_BP",
+              "L23_BTC",
+              "L23_CHC",
+              "L23_DBC",
+              "L23_LBC",
+              "L23_MC",
+              "L23_NBC",
+              "L23_NGC",
+              "L23_SBC",
+              "L2_IPC",
+              "L2_TPC:A",
+              "L2_TPC:B",
+              "L3_TPC:A",
+              "L3_TPC:C",
+              "L4_BP",
+              "L4_BTC",
+              "L4_CHC",
+              "L4_DBC",
+              "L4_LBC",
+              "L4_MC",
+              "L4_NBC",
+              "L4_NGC",
+              "L4_SBC",
+              "L4_SSC",
+              "L4_TPC",
+              "L4_UPC",
+              "L5_BP",
+              "L5_BTC",
+              "L5_CHC",
+              "L5_DBC",
+              "L5_LBC",
+              "L5_MC",
+              "L5_NBC",
+              "L5_NGC",
+              "L5_SBC",
+              "L5_TPC:A",
+              "L5_TPC:B",
+              "L5_TPC:C",
+              "L5_UPC",
+              "L6_BP",
+              "L6_BPC",
+              "L6_BTC",
+              "L6_CHC",
+              "L6_DBC",
+              "L6_HPC",
+              "L6_IPC",
+              "L6_LBC",
+              "L6_MC",
+              "L6_NBC",
+              "L6_NGC",
+              "L6_SBC",
+              "L6_TPC:A",
+              "L6_TPC:C",
+              "L6_UPC"
+            ]
+          },
+          "fct": "np.mean"
+        }
+      },
+      "res_sel": [
+        "conductance",
+        "decay_time",
+        "delay",
+        "depression_time",
+        "facilitation_time",
+        "n_rrp_vesicles",
+        "syn_type_id",
+        "u_syn"
+      ],
+      "range_prctile": 100,
+      "fig_size": [
+        11,
+        3
+      ],
+      "fig_file": {
+        "format": "png",
+        "dpi": 600
+      }
+    },
+    {
+      "name": "PropsStdPerMTypeHex0",
+      "fct": {
+        "source": "properties",
+        "kwargs": {
+          "group_by": "mtype",
+          "skip_empty_groups": true,
+          "sel_src": {
+            "node_set": "hex0",
+            "mtype": [
+              "L23_BTC",
+              "L23_SBC",
+              "L4_BTC",
+              "L4_SBC",
+              "L5_BTC",
+              "L5_SBC",
+              "L6_BTC",
+              "L6_SBC"
+            ]
+          },
+          "sel_dest": {
+            "node_set": "hex0",
+            "mtype": [
+              "L1_DAC",
+              "L1_HAC",
+              "L1_LAC",
+              "L1_NGC-DA",
+              "L1_NGC-SA",
+              "L1_SAC",
+              "L23_BP",
+              "L23_BTC",
+              "L23_CHC",
+              "L23_DBC",
+              "L23_LBC",
+              "L23_MC",
+              "L23_NBC",
+              "L23_NGC",
+              "L23_SBC",
+              "L2_IPC",
+              "L2_TPC:A",
+              "L2_TPC:B",
+              "L3_TPC:A",
+              "L3_TPC:C",
+              "L4_BP",
+              "L4_BTC",
+              "L4_CHC",
+              "L4_DBC",
+              "L4_LBC",
+              "L4_MC",
+              "L4_NBC",
+              "L4_NGC",
+              "L4_SBC",
+              "L4_SSC",
+              "L4_TPC",
+              "L4_UPC",
+              "L5_BP",
+              "L5_BTC",
+              "L5_CHC",
+              "L5_DBC",
+              "L5_LBC",
+              "L5_MC",
+              "L5_NBC",
+              "L5_NGC",
+              "L5_SBC",
+              "L5_TPC:A",
+              "L5_TPC:B",
+              "L5_TPC:C",
+              "L5_UPC",
+              "L6_BP",
+              "L6_BPC",
+              "L6_BTC",
+              "L6_CHC",
+              "L6_DBC",
+              "L6_HPC",
+              "L6_IPC",
+              "L6_LBC",
+              "L6_MC",
+              "L6_NBC",
+              "L6_NGC",
+              "L6_SBC",
+              "L6_TPC:A",
+              "L6_TPC:C",
+              "L6_UPC"
+            ]
+          },
+          "fct": "np.std"
+        }
+      },
+      "res_sel": [
+        "conductance",
+        "decay_time",
+        "delay",
+        "depression_time",
+        "facilitation_time",
+        "n_rrp_vesicles",
+        "syn_type_id",
+        "u_syn"
+      ],
+      "range_prctile": 100,
+      "fig_size": [
+        11,
+        3
+      ],
+      "fig_file": {
+        "format": "png",
+        "dpi": 600
+      }
+    }
+  ]
+}
