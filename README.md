@@ -50,7 +50,7 @@ Reproduction repository with code and configuration files for applying connectom
   - (b) In case the rewired circuit from Zenodo is used: Make sure that all path references in the `circuit_config<_tc>.json` of the rewired circuit are pointing to the location of the original circuit (since only the connectome, i.e., `edges.h5`, is different).
   - (c) Adapt paths and use example simulation configs from this repo to run simulations.
 
-<u>Note</u>: All (intermediate) results from steps 1 and 2 are also contained in the Zenodo dataset.
+<ins>Note</ins>: All (intermediate) results from steps 1 and 2 are also contained in the Zenodo dataset.
 
 ### Simplified connectomes
 
