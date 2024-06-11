@@ -73,7 +73,7 @@ Reproduction repository with code and configuration files for applying connectom
   - __(b)__ Follow [SSCx_rewiring.ipynb](simplified_connectomes/code/SSCx_rewiring.ipynb) to configure and run rewiring based on the stochastic model descriptions from the previous step (incl. matching the overall numbers of connections). As an output of this step, new SONATA circuits with rewired (simplified) E-to-E connectivity will be created.
   - __(c)__ Follow [SSCx_struct_comparison.ipynb](simplified_connectomes/code/SSCx_struct_comparison.ipynb) to configure and run a structural comparison of the rewired connectomes.
   - __(d)__ Follow [SSCx_model_order_validation.ipynb](simplified_connectomes/code/SSCx_model_order_validation.ipynb) to configure and run a validation of the rewired model orders.
-  - __(e)__ Follow [SSCx_missing_synapses.ipynb](simplified_connectomes/code/SSCx_missing_synapses.ipynb) to compute changes in missing afferent synapse counts.
+  - __(e)__ Follow [SSCx_missing_synapses.ipynb](simplified_connectomes/code/SSCx_missing_synapses.ipynb) to compute missing afferent synapse counts.
 - __Step 2 - Function:__
   - __(a)__ Re-calibration...
   - __(b)__ Analysis...
