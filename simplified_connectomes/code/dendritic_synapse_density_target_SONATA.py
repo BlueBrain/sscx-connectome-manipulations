@@ -1,3 +1,8 @@
+# This file is part of sscx-connectome-manipulations.
+# 
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2024 Blue Brain Project/EPFL
+
 # Description:   Extracts dendritic E/I synapse densities (#synapses/um) for each neuron within a given circuit target in isolation
 #                => To be used with SONATA circuits (requires Blue Brain SNAP)
 # Author:        C. Pokorny
