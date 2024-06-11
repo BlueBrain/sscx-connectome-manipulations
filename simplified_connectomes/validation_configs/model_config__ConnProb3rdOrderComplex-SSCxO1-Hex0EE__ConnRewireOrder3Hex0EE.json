@@ -1,0 +1,31 @@
+{
+  "working_dir": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_validation_v2/SSCx-HexO1-Release__ConnRewireOrder3Hex0EE",
+  "out_dir": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_validation_v2/SSCx-HexO1-Release__ConnRewireOrder3Hex0EE",
+  "seed": 7531,
+  "circuit_config": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/circuits_v2/SSCx-HexO1-Release__ConnRewireOrder3Hex0EE/circuit_config.json",
+  "model": {
+    "name": "ConnProb3rdOrderComplex-SSCxO1-Hex0EE",
+    "fct": {
+      "source": "conn_prob",
+      "kwargs": {
+        "order": 3,
+        "model_specs": {
+          "type": "ComplexExponential"
+        },
+        "sel_src": {
+          "node_set": "hex0",
+          "synapse_class": "EXC"
+        },
+        "sel_dest": {
+          "node_set": "hex0",
+          "synapse_class": "EXC"
+        },
+        "min_count_per_bin": 100,
+        "bin_size_um": 50,
+        "max_range_um": null,
+        "sample_size": null,
+        "pos_map_file": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/SSCx-HexO1-Release/model/FlatPosMapping-SSCxO1.json"
+      }
+    }
+  }
+}

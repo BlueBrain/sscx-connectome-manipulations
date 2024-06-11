@@ -1,0 +1,24 @@
+{
+  "working_dir": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_validation_v2/SSCx-HexO1-Release__ConnRewireOrder2Hex0EE",
+  "out_dir": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_validation_v2/SSCx-HexO1-Release__ConnRewireOrder2Hex0EE",
+  "seed": 7531,
+  "circuit_config": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/circuits_v2/SSCx-HexO1-Release__ConnRewireOrder2Hex0EE/circuit_config.json",
+  "model": {
+    "name": "ConnProb1stOrder-SSCxO1-Hex0EE",
+    "fct": {
+      "source": "conn_prob",
+      "kwargs": {
+        "order": 1,
+        "sel_src": {
+          "node_set": "hex0",
+          "synapse_class": "EXC"
+        },
+        "sel_dest": {
+          "node_set": "hex0",
+          "synapse_class": "EXC"
+        },
+        "sample_size": null
+      }
+    }
+  }
+}

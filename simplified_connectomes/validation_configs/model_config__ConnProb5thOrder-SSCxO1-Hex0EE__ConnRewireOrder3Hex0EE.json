@@ -1,0 +1,45 @@
+{
+  "working_dir": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_validation_v2/SSCx-HexO1-Release__ConnRewireOrder3Hex0EE",
+  "out_dir": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_validation_v2/SSCx-HexO1-Release__ConnRewireOrder3Hex0EE",
+  "seed": 7531,
+  "circuit_config": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/circuits_v2/SSCx-HexO1-Release__ConnRewireOrder3Hex0EE/circuit_config.json",
+  "model": {
+    "name": "ConnProb5thOrder-SSCxO1-Hex0EE",
+    "fct": {
+      "source": "conn_prob",
+      "kwargs": {
+        "order": "5R",
+        "sel_src": {
+          "node_set": "hex0",
+          "synapse_class": "EXC"
+        },
+        "sel_dest": {
+          "node_set": "hex0",
+          "synapse_class": "EXC"
+        },
+        "min_count_per_bin": 100,
+        "position_bin_size_um": 200,
+        "position_max_range_um": [
+          -2400,
+          200
+        ],
+        "offset_bin_size_um": 50,
+        "offset_max_range_um": [
+          450,
+          [
+            -1550,
+            650
+          ]
+        ],
+        "smoothing_sigma_um": null,
+        "plot_model_ovsampl": 7,
+        "plot_model_extsn": 0,
+        "sample_size": null,
+        "model_specs": {
+          "type": "LinearInterpolation"
+        },
+        "pos_map_file": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/SSCx-HexO1-Release/model/FlatPosMapping-SSCxO1.json"
+      }
+    }
+  }
+}
