@@ -1,0 +1,40 @@
+{
+  "circuit_config": "/gpfs/bbp.cscs.ch/project/proj83/jira-tickets/NSETM-1948-extract-hex-O1/data/O1_data/circuit_config.json",
+  "seed": 3210,
+  "manip": {
+    "name": "ConnRewireOrder2Hex0EE__calib-3__",
+    "fcts": [
+      {
+        "source": "conn_rewiring",
+        "sel_src": {
+          "node_set": "hex0",
+          "synapse_class": "EXC"
+        },
+        "sel_dest": {
+          "node_set": "hex0",
+          "synapse_class": "EXC"
+        },
+        "syn_class": "EXC",
+        "keep_indegree": false,
+        "reuse_conns": false,
+        "gen_method": "duplicate_randomize",
+        "amount_pct": 100,
+        "estimation_run": true,
+        "opt_nconn": false,
+        "p_scale": 1.0044420510563605,
+        "pos_map_file": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/SSCx-HexO1-Release/model/FlatPosMapping-SSCxO1.json",
+        "model_config": {
+          "prob_model_spec": {
+            "file": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/SSCx-HexO1-Release/model/ConnProb2ndOrderComplex-SSCxO1-Hex0EE.json"
+          },
+          "delay_model_spec": {
+            "file": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/SSCx-HexO1-Release/model/DistDepDelay-SSCxO1-Hex0EE.json"
+          },
+          "props_model_spec": {
+            "file": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/SSCx-HexO1-Release/model/ConnPropsPerPathway-SSCxO1-Hex0EE.json"
+          }
+        }
+      }
+    ]
+  }
+}

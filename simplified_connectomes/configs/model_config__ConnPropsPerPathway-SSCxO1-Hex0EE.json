@@ -1,0 +1,52 @@
+{
+  "working_dir": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/SSCx-HexO1-Release",
+  "out_dir": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/SSCx-HexO1-Release",
+  "seed": 7531,
+  "circuit_config": "/gpfs/bbp.cscs.ch/project/proj83/jira-tickets/NSETM-1948-extract-hex-O1/data/O1_data/circuit_config.json",
+  "model": {
+    "name": "ConnPropsPerPathway-SSCxO1-Hex0EE",
+    "fct": {
+      "source": "conn_props",
+      "kwargs": {
+        "sel_src": {
+          "node_set": "hex0",
+          "synapse_class": "EXC"
+        },
+        "sel_dest": {
+          "node_set": "hex0",
+          "synapse_class": "EXC"
+        },
+        "min_sample_size_per_group": 10,
+        "max_sample_size_per_group": 10000,
+        "distr_types": {
+          "conductance": "gamma",
+          "conductance_scale_factor": "constant",
+          "decay_time": "truncnorm",
+          "depression_time": "gamma",
+          "facilitation_time": "gamma",
+          "n_rrp_vesicles": "discrete",
+          "n_syn_per_conn": "discrete",
+          "syn_type_id": "constant",
+          "u_hill_coefficient": "constant",
+          "u_syn": "truncnorm",
+          "Use_d_TM": "zero",
+          "Use_p_TM": "zero",
+          "gmax_d_AMPA": "zero",
+          "gmax_p_AMPA": "zero",
+          "rho0_GB": "zero",
+          "spine_length": "zero",
+          "theta_d": "zero",
+          "theta_p": "zero",
+          "volume_CR": "zero"
+        },
+        "data_types": {
+          "n_rrp_vesicles": "int",
+          "n_syn_per_conn": "int",
+          "syn_type_id": "int"
+        },
+        "data_bounds": {},
+        "plot_sample_size": 10000
+      }
+    }
+  }
+}

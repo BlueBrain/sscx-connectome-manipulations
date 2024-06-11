@@ -1,0 +1,24 @@
+{
+  "working_dir": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/SSCx-HexO1-Release",
+  "out_dir": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/SSCx-HexO1-Release",
+  "seed": 7531,
+  "circuit_config": "/gpfs/bbp.cscs.ch/project/proj83/jira-tickets/NSETM-1948-extract-hex-O1/data/O1_data/circuit_config.json",
+  "model": {
+    "name": "ConnProb1stOrder-SSCxO1-Hex0EE",
+    "fct": {
+      "source": "conn_prob",
+      "kwargs": {
+        "order": 1,
+        "sel_src": {
+          "node_set": "hex0",
+          "synapse_class": "EXC"
+        },
+        "sel_dest": {
+          "node_set": "hex0",
+          "synapse_class": "EXC"
+        },
+        "sample_size": null
+      }
+    }
+  }
+}

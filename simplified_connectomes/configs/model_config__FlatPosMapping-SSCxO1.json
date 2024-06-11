@@ -1,0 +1,22 @@
+{
+  "working_dir": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/SSCx-HexO1-Release",
+  "out_dir": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/SSCx-HexO1-Release",
+  "seed": 7531,
+  "circuit_config": "/gpfs/bbp.cscs.ch/project/proj83/jira-tickets/NSETM-1948-extract-hex-O1/data/O1_data/circuit_config.json",
+  "model": {
+    "name": "FlatPosMapping-SSCxO1",
+    "fct": {
+      "source": "pos_mapping",
+      "kwargs": {
+        "flatmap_path": "/gpfs/bbp.cscs.ch/project/proj83/home/pokorny/SimplifiedConnectomeModels/model_building_v2/rat_sscx_enhanced",
+        "xy_file": "flatmap",
+        "z_file": "depth",
+        "xy_scale": [
+          6426.0,
+          6426.0
+        ],
+        "z_scale": -1.0
+      }
+    }
+  }
+}
