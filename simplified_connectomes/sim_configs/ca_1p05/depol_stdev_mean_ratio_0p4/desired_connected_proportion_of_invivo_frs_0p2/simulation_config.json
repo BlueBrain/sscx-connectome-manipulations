@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "run": {
+    "dt": 0.025,
+    "random_seed": 1,
+    "tstop": 6500
+  },
+  "network": "/gpfs/bbp.cscs.ch/project/proj83/jira-tickets/NSETM-1948-extract-hex-O1/data/O1_data/circuit_config_tc.json",
+  "node_set": "hex0",
+  "target_simulator": "CORENEURON",
+  "output": {
+    "output_dir": "./reporting",
+    "spikes_file": "spikes.h5"
+  },
+
+
+  "conditions": {
+    "extracellular_calcium": 1.05,
+    "v_init": -80.0,
+    "mechanisms": {
+        "ProbAMPANMDA_EMS": {
+            "init_depleted": true,
+            "minis_single_vesicle": true
+        },
+        "ProbGABAAB_EMS": {
+            "init_depleted": true,
+            "minis_single_vesicle": true
+        }
+
+    }
+  },
+
+  "connection_overrides": [
+        {
+            "name": "no_vpm_proj",
+            "source": "proj_Thalamocortical_VPM_Source",
+            "target": "hex0",
+            "weight": 0.0
+        },
+        {
+            "name": "no_vpm_proj",
+            "source": "proj_Thalamocortical_POM_Source",
+            "target": "hex0",
+            "weight": 0.0
+        },
+        {
+            "name": "init",
+            "source": "hex0",
+            "target": "hex0",
+            "weight": 1.0
+        },
+        {
+            "name": "disconnect",
+            "source": "hex0",
+            "target": "hex0",
+            "delay": 0.025,
+            "weight": 0.0
+        },
+        {
+            "name": "reconnect",
+            "source": "hex0",
+            "target": "hex0",
+            "delay": 1000,
+            "weight": 1.0
+        }
+    ],
+
+
+"inputs": {
+     "Stimulus gExc_L1": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": 250,
+        "duration": 6500,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": 1.902,
+        "sd_percent": 0.761,
+        "node_set": "Layer1"
+    },
+    "Stimulus gExc_L23E": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": 250,
+        "duration": 6500,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": 17.718,
+        "sd_percent": 7.087,
+        "node_set": "Layer23Excitatory"
+    },
+    "Stimulus gExc_L23I": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": 250,
+        "duration": 6500,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": 0.1,
+        "sd_percent": 0.04,
+        "node_set": "Layer23Inhibitory"
+    },
+    "Stimulus gExc_L4E": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": 250,
+        "duration": 6500,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": 8.408,
+        "sd_percent": 3.363,
+        "node_set": "Layer4Excitatory"
+    },
+    "Stimulus gExc_L4I": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": 250,
+        "duration": 6500,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": 1.502,
+        "sd_percent": 0.601,
+        "node_set": "Layer4Inhibitory"
+    },
+    "Stimulus gExc_L5E": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": 250,
+        "duration": 6500,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": 15.616,
+        "sd_percent": 6.246,
+        "node_set": "Layer5Excitatory"
+    },
+    "Stimulus gExc_L5I": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": 250,
+        "duration": 6500,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": 3.103,
+        "sd_percent": 1.241,
+        "node_set": "Layer5Inhibitory"
+    },
+    "Stimulus gExc_L6E": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": 250,
+        "duration": 6500,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": 2.202,
+        "sd_percent": 0.881,
+        "node_set": "Layer6Excitatory"
+    },
+    "Stimulus gExc_L6I": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": 250,
+        "duration": 6500,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": 1.702,
+        "sd_percent": 0.681,
+        "node_set": "Layer6Inhibitory"
+    }
+  },
+
+  "depol_stdev_mean_ratio": 0.4,
+  "desired_connected_proportion_of_invivo_frs": 0.2,
+  "desired_unconnected_fr_L1I": 0.2798537469615914,
+  "desired_unconnected_fr_L23E": 0.012936188773601953,
+  "desired_unconnected_fr_L23I": 0.07413992145660145,
+  "desired_unconnected_fr_L4E": 0.09898470963333876,
+  "desired_unconnected_fr_L4I": 0.19117989220697504,
+  "desired_unconnected_fr_L5E": 0.17863833382409788,
+  "desired_unconnected_fr_L5I": 0.3948068507509192,
+  "desired_unconnected_fr_L6E": 0.05316006553345616,
+  "desired_unconnected_fr_L6I": 0.1749454191962894,
+  "desired_connected_fr_L1I": 0.30000000000000004,
+  "desired_connected_fr_L23E": 0.014000000000000002,
+  "desired_connected_fr_L23I": 0.1922,
+  "desired_connected_fr_L4E": 0.12380000000000001,
+  "desired_connected_fr_L4I": 0.2368,
+  "desired_connected_fr_L5E": 0.2504,
+  "desired_connected_fr_L5I": 0.47140000000000004,
+  "desired_connected_fr_L6E": 0.094,
+  "desired_connected_fr_L6I": 0.30000000000000004
+
+  
+}

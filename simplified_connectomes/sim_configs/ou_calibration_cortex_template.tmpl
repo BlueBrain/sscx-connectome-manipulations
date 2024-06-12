@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "run": {
+    "dt": 0.025,
+    "random_seed": 1,
+    "tstop": $sim_duration
+  },
+  "network": "$circuit_config",
+  "node_set": "$node_set",
+  "target_simulator": "CORENEURON",
+  "output": {
+    "output_dir": "./reporting",
+    "spikes_file": "spikes.h5"
+  },
+
+
+  "conditions": {
+    "extracellular_calcium": $ca,
+    "v_init": -80.0,
+    "mechanisms": {
+        "ProbAMPANMDA_EMS": {
+            "init_depleted": true,
+            "minis_single_vesicle": true
+        },
+        "ProbGABAAB_EMS": {
+            "init_depleted": true,
+            "minis_single_vesicle": true
+        }
+
+    }
+  },
+
+  "connection_overrides": [
+        {
+            "name": "no_vpm_proj",
+            "source": "proj_Thalamocortical_VPM_Source",
+            "target": "$node_set",
+            "weight": 0.0
+        },
+        {
+            "name": "no_vpm_proj",
+            "source": "proj_Thalamocortical_POM_Source",
+            "target": "$node_set",
+            "weight": 0.0
+        },
+        {
+            "name": "init",
+            "source": "$node_set",
+            "target": "$node_set",
+            "weight": 1.0
+        },
+        {
+            "name": "disconnect",
+            "source": "$node_set",
+            "target": "$node_set",
+            "delay": 0.025,
+            "weight": 0.0
+        },
+        {
+            "name": "reconnect",
+            "source": "$node_set",
+            "target": "$node_set",
+            "delay": $reconn_delay,
+            "weight": 1.0
+        }
+    ],
+
+
+"inputs": {
+     "Stimulus gExc_L1": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": $ornstein_uhlenbeck_delay,
+        "duration": $sim_duration,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": $ornstein_uhlenbeck_mean_pct_L1I,
+        "sd_percent": $ornstein_uhlenbeck_sd_pct_L1I,
+        "node_set": "Layer1"
+    },
+    "Stimulus gExc_L23E": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": $ornstein_uhlenbeck_delay,
+        "duration": $sim_duration,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": $ornstein_uhlenbeck_mean_pct_L23E,
+        "sd_percent": $ornstein_uhlenbeck_sd_pct_L23E,
+        "node_set": "Layer23Excitatory"
+    },
+    "Stimulus gExc_L23I": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": $ornstein_uhlenbeck_delay,
+        "duration": $sim_duration,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": $ornstein_uhlenbeck_mean_pct_L23I,
+        "sd_percent": $ornstein_uhlenbeck_sd_pct_L23I,
+        "node_set": "Layer23Inhibitory"
+    },
+    "Stimulus gExc_L4E": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": $ornstein_uhlenbeck_delay,
+        "duration": $sim_duration,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": $ornstein_uhlenbeck_mean_pct_L4E,
+        "sd_percent": $ornstein_uhlenbeck_sd_pct_L4E,
+        "node_set": "Layer4Excitatory"
+    },
+    "Stimulus gExc_L4I": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": $ornstein_uhlenbeck_delay,
+        "duration": $sim_duration,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": $ornstein_uhlenbeck_mean_pct_L4I,
+        "sd_percent": $ornstein_uhlenbeck_sd_pct_L4I,
+        "node_set": "Layer4Inhibitory"
+    },
+    "Stimulus gExc_L5E": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": $ornstein_uhlenbeck_delay,
+        "duration": $sim_duration,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": $ornstein_uhlenbeck_mean_pct_L5E,
+        "sd_percent": $ornstein_uhlenbeck_sd_pct_L5E,
+        "node_set": "Layer5Excitatory"
+    },
+    "Stimulus gExc_L5I": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": $ornstein_uhlenbeck_delay,
+        "duration": $sim_duration,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": $ornstein_uhlenbeck_mean_pct_L5I,
+        "sd_percent": $ornstein_uhlenbeck_sd_pct_L5I,
+        "node_set": "Layer5Inhibitory"
+    },
+    "Stimulus gExc_L6E": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": $ornstein_uhlenbeck_delay,
+        "duration": $sim_duration,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": $ornstein_uhlenbeck_mean_pct_L6E,
+        "sd_percent": $ornstein_uhlenbeck_sd_pct_L6E,
+        "node_set": "Layer6Excitatory"
+    },
+    "Stimulus gExc_L6I": {
+        "input_type": "conductance",
+        "module": "relative_ornstein_uhlenbeck",
+        "delay": $ornstein_uhlenbeck_delay,
+        "duration": $sim_duration,
+        "reversal": 0,
+        "tau": 2.7,
+        "mean_percent": $ornstein_uhlenbeck_mean_pct_L6I,
+        "sd_percent": $ornstein_uhlenbeck_sd_pct_L6I,
+        "node_set": "Layer6Inhibitory"
+    }
+  },
+
+  "depol_stdev_mean_ratio": $depol_stdev_mean_ratio,
+  "desired_connected_proportion_of_invivo_frs": $desired_connected_proportion_of_invivo_frs,
+  "desired_unconnected_fr_L1I": $desired_unconnected_fr_L1I,
+  "desired_unconnected_fr_L23E": $desired_unconnected_fr_L23E,
+  "desired_unconnected_fr_L23I": $desired_unconnected_fr_L23I,
+  "desired_unconnected_fr_L4E": $desired_unconnected_fr_L4E,
+  "desired_unconnected_fr_L4I": $desired_unconnected_fr_L4I,
+  "desired_unconnected_fr_L5E": $desired_unconnected_fr_L5E,
+  "desired_unconnected_fr_L5I": $desired_unconnected_fr_L5I,
+  "desired_unconnected_fr_L6E": $desired_unconnected_fr_L6E,
+  "desired_unconnected_fr_L6I": $desired_unconnected_fr_L6I,
+  "desired_connected_fr_L1I": $desired_connected_fr_L1I,
+  "desired_connected_fr_L23E": $desired_connected_fr_L23E,
+  "desired_connected_fr_L23I": $desired_connected_fr_L23I,
+  "desired_connected_fr_L4E": $desired_connected_fr_L4E,
+  "desired_connected_fr_L4I": $desired_connected_fr_L4I,
+  "desired_connected_fr_L5E": $desired_connected_fr_L5E,
+  "desired_connected_fr_L5I": $desired_connected_fr_L5I,
+  "desired_connected_fr_L6E": $desired_connected_fr_L6E,
+  "desired_connected_fr_L6I": $desired_connected_fr_L6I
+
+  
+}

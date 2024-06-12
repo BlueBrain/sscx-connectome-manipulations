@@ -27,12 +27,12 @@ Reproduction repository with code and configuration files for applying connectom
 - [__interneuron_rewiring/__](interneuron_rewiring/) ... Code/configs related to the interneuron rewiring experiment
   - [__code/__](interneuron_rewiring/code/) ... Code/notebooks for setting up and running model building, rewiring, structural comparison, and analysis
   - [__configs/__](interneuron_rewiring/configs/) ... Config files and run scripts for model building, rewiring, structural comparison, simulations, and analysis
-  - [__sim_configs/__](interneuron_rewiring/sim_configs/) ... Simulation config files for running spontaneous simulations with current injection
+  - [__sim_configs/__](interneuron_rewiring/sim_configs/) ... Simulation config example files for running spontaneous simulations with current injection
 - [__simplified_connectomes/__](simplified_connectomes/) ... Code/configs related to the simplified connectomes experiment
   - [__code/__](simplified_connectomes/code/) ... Code/notebooks for setting up and running model building, rewiring, structural comparison, validation, missing synapse estimation, and calibration
   - [__configs/__](simplified_connectomes/configs/) ... Config files and run scripts for model building, rewiring, structural comparison, simulations, and calibration
   - [__validation_configs/__](simplified_connectomes/validation_configs/) ... Config files to run model order validation
-  - [__sim_configs/__](simplified_connectomes/sim_configs/) ... Simulation config files for running re-calibration simulations
+  - [__sim_configs/__](simplified_connectomes/sim_configs/) ... Simulation config template and example files for running re-calibration simulations
 - [__notebooks/__](notebooks/) ... Jupyter notebooks for reproducing the structural/functional figures in the accompanying article
 
 
@@ -57,7 +57,8 @@ Reproduction repository with code and configuration files for applying connectom
 
 ### Interneuron rewiring
 
-- __Step 1 - Structure:__ Follow [interneuron_rewiring_preparation.ipynb](interneuron_rewiring/code/interneuron_rewiring_preparation.ipynb) to configure and run model fitting, rewiring and structural comparison. As an output of this step, a new SONATA circuit with rewired interneuron connectivity will be created.
+- __Step 1 - Structure:__
+  - Follow [interneuron_rewiring_preparation.ipynb](interneuron_rewiring/code/interneuron_rewiring_preparation.ipynb) to configure and run model fitting, rewiring and structural comparison. As an output of this step, a new SONATA circuit with rewired interneuron connectivity will be created.
 - __Step 2 - Function:__ Functional quantification of the rewired connectome by running network simulations with current injection.
   - __(a)__ Follow the instructions "Simulating the model" from DOI: [10.5281/zenodo.8026353](https://doi.org/10.5281/zenodo.8026353) for setting up the SSCx network model for simulations.
   - __(b)__ IMPORTANT, in case the rewired circuit from Zenodo is used: Make sure that all path references in the `circuit_config<_tc>.json` of the rewired circuit are pointing to the location of the original circuit (since only a new connectome file, i.e., `edges.h5`, is provided).
@@ -75,15 +76,15 @@ Reproduction repository with code and configuration files for applying connectom
   - __(d)__ Follow [SSCx_model_order_validation.ipynb](simplified_connectomes/code/SSCx_model_order_validation.ipynb) to configure and run a validation of the rewired model orders.
   - __(e)__ Follow [SSCx_missing_synapses.ipynb](simplified_connectomes/code/SSCx_missing_synapses.ipynb) to compute missing afferent synapse counts.
 - __Step 2 - Function:__
-  - __(a)__ Re-calibration...
-  - __(b)__ Analysis...
+  - __(a)__ Follow the instructions "Simulating the model" from DOI: [10.5281/zenodo.8026353](https://doi.org/10.5281/zenodo.8026353) for setting up the SSCx network model for simulations.
+  - __(b)__ Follow [SSCx_calibration.ipynb](simplified_connectomes/code/SSCx_calibration.ipynb) for iterative re-calibration and analysis of the original and rewired circuits.
 
 <ins>Note</ins>: All (intermediate) results from steps 1 and 2 are also contained in the Zenodo dataset.
 
 ### Replicating figures of the accompanying article
 
-- For replicating the structural figures (both experiments), configure and follow [notebooks/connectome_manipulator_figs_structural.ipynb](notebooks/connectome_manipulator_figs_structural.ipynb)
-- For replicating the functional figures (both experiments), configure and follow [notebooks/connectome_manipulator_figs_functional.ipynb](notebooks/connectome_manipulator_figs_functional.ipynb)
+- For replicating the structural figures (both experiments), configure and follow [notebooks/connectome_manipulator_figs_structural.ipynb](notebooks/connectome_manipulator_figs_structural.ipynb).
+- For replicating the functional figures (both experiments), configure and follow [notebooks/connectome_manipulator_figs_functional.ipynb](notebooks/connectome_manipulator_figs_functional.ipynb).
 
 
 ## Citation
