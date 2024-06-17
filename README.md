@@ -8,7 +8,7 @@ Reproduction repository for applying connectome manipulations to a detailed mode
 
 ## Introduction
 
-Reproduction repository with code and configuration files for applying connectome manipulations using [_Connectome-Manipulator_](https://github.com/BlueBrain/connectome-manipulator) to a detailed anatomical<sup>1</sup> and physiological<sup>2</sup> model of the rat somatosensory cortex (SSCx) in SONATA<sup>3</sup> format (released under DOI: [10.5281/zenodo.8026353](https://doi.org/10.5281/zenodo.8026353)), analyzing results, and reproducing the experiments and figures that can be found in the accompanying article<sup>4</sup>. Specifically, the following two rewiring experiments that are described in the article are part of this repository, together with the accompanying dataset on Zenodo (DOI: [XXX](https://zenodo.org/XXX)).
+Reproduction repository with code and configuration files for applying connectome manipulations using [_Connectome-Manipulator_](https://github.com/BlueBrain/connectome-manipulator) to a detailed anatomical<sup>1</sup> and physiological<sup>2</sup> model of the rat somatosensory cortex (SSCx) in SONATA<sup>3</sup> format (released under DOI: [10.5281/zenodo.8026353](https://doi.org/10.5281/zenodo.8026353)), analyzing results, and reproducing the experiments and figures that can be found in the accompanying article<sup>4</sup>. Specifically, the following two rewiring experiments that are described in the article are part of this repository, together with the accompanying dataset on Zenodo (DOI: [10.5281/zenodo.11402579](https://doi.org/10.5281/zenodo.11402579)).
 - __Interneuron rewiring:__ Increasing the inhibitory targeting specificity of VIP+ (vasoactive intestinal peptide-expressing) interneurons, thereby transplanting connectivity trends present in the MICrONS dataset<sup>5</sup>. Functional quantification through current injection simulations.
 - __Simplified connectomes:__ Progressively simplifying<sup>6</sup> connectivity among excitatory neurons. Investigating the changes in spiking synamics through re-calibration to an _in vivo_-like activity state<sup>2</sup>.
 
@@ -46,7 +46,7 @@ Reproduction repository with code and configuration files for applying connectom
 
 - Download and install the [Connectome-Manipulator](https://github.com/BlueBrain/connectome-manipulator) software in a Python venv
 - Download the code and config files from this [sscx-connectome-manipulations](https://github.com/BlueBrain/sscx-connectome-manipulations) repo
-- Download the accompanying dataset from Zenodo (DOI: [XXX](https://zenodo.org/XXX))
+- Download and uncompress the accompanying dataset from Zenodo (DOI: [10.5281/zenodo.11402579](https://doi.org/10.5281/zenodo.11402579))
 - Download the code from the [CortexETL](https://github.com/BlueBrain/cortexetl) repo
 - Download and uncompress the released SSCx network model in SONATA format from Zenodo (DOI: [10.5281/zenodo.8026353](https://doi.org/10.5281/zenodo.8026353))
 - Download and uncompress the corresponding SSCx flat map from Zenodo (DOI: [10.5281/zenodo.10686776](https://doi.org/10.5281/zenodo.10686776))
