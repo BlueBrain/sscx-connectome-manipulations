@@ -8,9 +8,10 @@ Reproduction repository for applying connectome manipulations to a detailed mode
 
 ## Introduction
 
-Reproduction repository with code and configuration files for applying connectome manipulations using [_Connectome-Manipulator_](https://github.com/BlueBrain/connectome-manipulator) to a detailed anatomical<sup>1</sup> and physiological<sup>2</sup> model of the rat somatosensory cortex (SSCx) in SONATA<sup>3</sup> format (released under DOI: [10.5281/zenodo.8026353](https://doi.org/10.5281/zenodo.8026353)), analyzing results, and reproducing the experiments and figures that can be found in the accompanying article<sup>4</sup>. Specifically, the following two rewiring experiments that are described in the article are part of this repository, together with the accompanying dataset on Zenodo (DOI: [10.5281/zenodo.11402578](https://doi.org/10.5281/zenodo.11402578)).
+Reproduction repository with code and configuration files for applying connectome manipulations using [_Connectome-Manipulator_](https://github.com/BlueBrain/connectome-manipulator) to a detailed anatomical<sup>1</sup> and physiological<sup>2</sup> model of the rat somatosensory cortex (SSCx) in SONATA<sup>3</sup> format (released under DOI: [10.5281/zenodo.8026353](https://doi.org/10.5281/zenodo.8026353)), analyzing results, and reproducing the experiments and figures that can be found in the accompanying article<sup>4</sup>. Specifically, the following rewiring experiments and benchmarks that are described in the article are part of this repository, together with the accompanying dataset on Zenodo (DOI: [10.5281/zenodo.11402578](https://doi.org/10.5281/zenodo.11402578)).
 - __Interneuron rewiring:__ Increasing the inhibitory targeting specificity of VIP+ (vasoactive intestinal peptide-expressing) interneurons, thereby transplanting connectivity trends present in the MICrONS dataset<sup>5</sup>. Functional quantification through current injection simulations.
 - __Simplified connectomes:__ Progressively simplifying<sup>6</sup> connectivity among excitatory neurons. Investigating the changes in spiking synamics through re-calibration to an _in vivo_-like activity state<sup>2</sup>.
+- __Performance benchmarks:__ Benchmarks tests to assess the strong and weak scaling behavior of connectome rewiring.
 
 ### References:
 
@@ -33,7 +34,7 @@ Reproduction repository with code and configuration files for applying connectom
   - [__configs/__](simplified_connectomes/configs/) ... Config files and run scripts for model building, rewiring, structural comparison, simulations, and calibration
   - [__validation_configs/__](simplified_connectomes/validation_configs/) ... Config files to run model order validation
   - [__sim_configs/__](simplified_connectomes/sim_configs/) ... Simulation config template and example files for running re-calibration simulations
-- [__notebooks/__](notebooks/) ... Jupyter notebooks for reproducing the structural/functional figures in the accompanying article
+- [__notebooks/__](notebooks/) ... Jupyter notebooks for reproducing the structural/functional/benchmark figures in the accompanying article
 
 
 ## Requirements
@@ -81,11 +82,22 @@ Reproduction repository with code and configuration files for applying connectom
 
 <ins>Note</ins>: All (intermediate) results from steps 1 and 2 are also contained in the Zenodo dataset.
 
+### Benchmarks
+
+Repeatedly run rewiring as in "Simplified connectomes - Step 1b" based on the fitted 1st order stochastic connectivity model, and measure the resulting runtimes, under the following conditions:
+
+- __Strong scaling:__
+  Using 12,345 data splits and different numbers of processing units (CPUs) from 4 to 512 in 8 logarithmic steps.
+- __Weak scaling:__
+  Using 1,234 data splits and different network sizes by selecting the different source/target node sets "NS1.0", "NS0.5", "NS0.25", and "NS0.125" as provided in the enclosed `nodesets_weak_scaling.json` (Zenodo).
+
+<ins>Note</ins>: All benchmark results (runtimes) are also contained in the Zenodo dataset.
+
 ### Replicating figures of the accompanying article
 
 - For replicating the structural figures (both experiments), configure and follow [notebooks/connectome_manipulator_figs_structural.ipynb](notebooks/connectome_manipulator_figs_structural.ipynb).
 - For replicating the functional figures (both experiments), configure and follow [notebooks/connectome_manipulator_figs_functional.ipynb](notebooks/connectome_manipulator_figs_functional.ipynb).
-
+- For replicating the benchmark figures, configure and follow [notebooks/connectome_manipulator_figs_benchmark.ipynb](notebooks/connectome_manipulator_figs_benchmark.ipynb).
 
 ## Citation
 
