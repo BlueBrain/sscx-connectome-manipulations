@@ -87,9 +87,11 @@ Reproduction repository with code and configuration files for applying connectom
 Repeatedly run rewiring as in "Simplified connectomes - Step 1b" based on the fitted 1st order stochastic connectivity model, and measure the resulting runtimes, under the following conditions:
 
 - __Strong scaling:__
-  Using 12,345 data splits and different numbers of processing units (CPUs) from 4 to 512 in 8 logarithmic steps.
+  Using 12,345 data splits*) and different numbers of processing units (CPUs) from 4 to 512 in 8 logarithmic steps.
 - __Weak scaling:__
-  Using 1,234 data splits and different network sizes by selecting the different source/target node sets "NS1.0", "NS0.5", "NS0.25", and "NS0.125" as provided in the enclosed `nodesets_weak_scaling.json` (Zenodo). Importantly, this node sets file must be set in the original SONATA circuit config under "node_sets_file".
+  Using 1,234 data splits*) and different network sizes by selecting the different source/target node sets "NS1.0", "NS0.5", "NS0.25", and "NS0.125" as provided in the enclosed `nodesets_weak_scaling.json` (Zenodo). Importantly, this node sets file must be set in the original SONATA circuit config under "node_sets_file".
+
+*) Aritrary (large) numbers of data splits
 
 <ins>Note</ins>: All benchmark results (runtimes) are also contained in the Zenodo dataset.
 
