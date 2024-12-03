@@ -1,5 +1,5 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![DOI:10.1101/2024.05.24.593860](http://img.shields.io/badge/DOI-10.1101/2024.05.24.593860-B31B1B.svg)](https://doi.org/10.1101/2024.05.24.593860)
+[![DOI:10.1101/2024.05.24.593860](http://img.shields.io/badge/DOI-10.1162/netn__a__00429-B31B1B.svg)](https://doi.org/10.1162/netn_a_00429)
 
 # SSCx connectome manipulations
 
@@ -15,10 +15,10 @@ Reproduction repository with code and configuration files for applying connectom
 
 ### References:
 
-1. Reimann, M. W., Bolaños-Puchet, S., Courcol, J., Egas Santander, D., et al. (2022). Modeling and Simulation of Neocortical Micro- and Mesocircuitry. Part I: Anatomy. _bioRxiv_. DOI: [10.1101/2022.08.11.503144](https://doi.org/10.1101/2022.08.11.503144)
-2. Isbister, J. B., Ecker, A., Pokorny, C., Bolaños-Puchet, S., Egas Santander, D., et al. (2023). Modeling and Simulation of Neocortical Micro- and Mesocircuitry. Part II: Physiology and Experimentation. _bioRxiv_. DOI: [10.1101/2023.05.17.541168](https://doi.org/10.1101/2023.05.17.541168)
-3. Dai, K., et al. (2020). The SONATA data format for efficient description of large-scale network models. _PLoS Comput Biol_, 16(2), e1007696. DOI: [10.1371/journal.pcbi.1007696](https://doi.org/10.1371/journal.pcbi.1007696)
-4. Pokorny, C., et al. (2024). A connectome manipulation framework for the systematic and reproducible study of structure-function relationships through simulations. _bioRxiv_. DOI: [10.1101/2024.05.24.593860](https://doi.org/10.1101/2024.05.24.593860)
+1. Reimann, M. W., Bolaños-Puchet, S., Courcol, J., Egas Santander, D., et al. (2024). Modeling and Simulation of Neocortical Micro- and Mesocircuitry. Part I: Anatomy. _eLife_, 13:RP99688. DOI: [10.7554/eLife.99688.1](https://doi.org/10.7554/eLife.99688.1)
+2. Isbister, J. B., Ecker, A., Pokorny, C., Bolaños-Puchet, S., Egas Santander, D., et al. (2024). Modeling and Simulation of Neocortical Micro- and Mesocircuitry. Part II: Physiology and Experimentation. _eLife_, 13:RP99693. DOI: [10.7554/eLife.99693.1](https://doi.org/10.7554/eLife.99693.1)
+3. Dai, K., et al. (2020). The SONATA data format for efficient description of large-scale network models. _PLOS Computational Biology_, 16(2), e1007696. DOI: [10.1371/journal.pcbi.1007696](https://doi.org/10.1371/journal.pcbi.1007696)
+4. Pokorny, C., et al. (2024). A connectome manipulation framework for the systematic and reproducible study of structure-function relationships through simulations. _Network Neuroscience_. DOI: [10.1162/netn_a_00429](https://doi.org/10.1162/netn_a_00429)
 5. Schneider-Mizell, C. M., et al. (2024). Cell-type-specific inhibitory circuitry from a connectomic census of mouse visual cortex. _bioRxiv_. DOI: [10.1101/2023.01.23.525290](https://doi.org/10.1101/2023.01.23.525290)
 6. Gal E., et al. (2020). Neuron Geometry Underlies Universal Network Features in Cortical Microcircuits. _bioRxiv_. DOI: [10.1101/656058](https://doi.org/10.1101/656058)
 
@@ -105,16 +105,16 @@ Repeatedly run rewiring as in "Simplified connectomes - Step 1b" based on the fi
 
 If you use this software, we kindly ask you to cite the following publication:
 
-C. Pokorny, O. Awile, J.B. Isbister, K. Kurban, M. Wolf, and M.W. Reimann (2024). __A connectome manipulation framework for the systematic and reproducible study of structure-function relationships through simulations.__ bioRxiv 2024.05.24.593860. DOI: [10.1101/2024.05.24.593860](https://doi.org/10.1101/2024.05.24.593860)
+C. Pokorny, O. Awile, J.B. Isbister, K. Kurban, M. Wolf, and M.W. Reimann (2024). __A connectome manipulation framework for the systematic and reproducible study of structure–function relationships through simulations.__ Network Neuroscience. DOI: [10.1162/netn_a_00429](https://doi.org/10.1162/netn_a_00429)
 
 ```
 @article{pokorny2024connectome,
   author = {Pokorny, Christoph and Awile, Omar and Isbister, James B and Kurban, Kerem and Wolf, Matthias and Reimann, Michael W},
   title = {A connectome manipulation framework for the systematic and reproducible study of structure--function relationships through simulations},
-  journal = {bioRxiv},
+  journal = {Network Neuroscience},
   year = {2024},
-  publisher={Cold Spring Harbor Laboratory},
-  doi = {10.1101/2024.05.24.593860}
+  publisher={MIT Press},
+  doi = {10.1162/netn_a_00429}
 }
 ```
 
